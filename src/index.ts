@@ -15,7 +15,12 @@ app.get("/api/v1/catalog", req => {
 });
 
 app.listen(port, () => {
-    const ms = new MicroService({ application: "micro-commerce", service: "service-catalog", version: "v0.0.1", port });
+    const ms = new MicroService({
+        application: "micro-commerce",
+        service: "service-catalog",
+        version: "v0.0.1",
+        port
+    });
     process.on("SIGINT", async () => {
         await ms.stop();
         process.exit(0);
