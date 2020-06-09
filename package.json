@@ -1,6 +1,5 @@
 {
-  "name": "micro-commerce",
-  "service": "service-catalog",
+  "name": "micro-commerce-service-catalog",
   "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
@@ -21,7 +20,8 @@
   "dependencies": {
     "@newdash/newdash-node": "^5.4.1",
     "bonjour": "^3.5.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",

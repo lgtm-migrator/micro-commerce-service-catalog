@@ -1,3 +1,4 @@
+import "isomorphic-fetch";
 import bonjour, { Service, Browser } from "bonjour";
 
 interface MicroServiceOptions {
@@ -43,7 +44,7 @@ export class Discover {
         return this._discover.services.find(s => s.name == serviceName);
     }
 
-    public async invoke(serviceName: string, path: string, init: RequestInit): Promise<Response> {
+    public async invoke(serviceName: string, path: string, init?: RequestInit): Promise<Response> {
         const service = this.getOneService(serviceName);
         if (!service) {
             throw new Error(`not found instance for ${service}`);
