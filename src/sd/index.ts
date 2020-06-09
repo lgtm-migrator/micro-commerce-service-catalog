@@ -47,7 +47,7 @@ export class Discover {
     public async invoke(serviceName: string, path: string, init?: RequestInit): Promise<Response> {
         const service = this.getOneService(serviceName);
         if (!service) {
-            throw new Error(`not found instance for ${service}`);
+            throw new Error(`not found instance for ${serviceName}`);
         }
         const url = `http://${service.host}:${service.port}${path}`;
         return fetch(url, init);
